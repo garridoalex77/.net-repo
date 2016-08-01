@@ -9,13 +9,18 @@ namespace EmptyConsole1
     {
         public static void Main(string[] args)
         {
-            int a = 8;
-            int b = ++a;
-            if (a > 5)
-                b -= 3;
-            else 
-                b = 9;
-            Console.WriteLine(b);
+            int x = 42;
+            switch (x)
+            {
+                case 42:
+                case 33:
+                    Console.WriteLine("Its 42");
+                    Console.WriteLine("is it 33");
+                    break;
+                default:
+                    Console.WriteLine("not valid");
+                    break;
+            }
         }
     }
 }

@@ -9,10 +9,13 @@ namespace EmptyConsole1
     {
         public static void Main(string[] args)
         {
-            int a = 15;
-            int b = 6;
-            a %= b;
-            Console.WriteLine(a);
+            int a = 8;
+            int b = ++a;
+            if (a > 5)
+                b -= 3;
+            else 
+                b = 9;
+            Console.WriteLine(b);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace EmptyConsole1
     {
         public static void Main(string[] args)
         {
-    //         List<int> allNarns = new List<int>();
+            List<int> allNarns = new List<int>();
     //         int num = 0;
     //         int numArrLength = 0;
     //         int i;
@@ -36,9 +36,20 @@ namespace EmptyConsole1
 
             Console.WriteLine("Please enter your name:");
             string name = Console.ReadLine();
-            Console.WriteLine("hi {0}", name);
             char[] wordArr = name.ToCharArray();
-            Console.WriteLine("{0}", wordArr);
+            LinkedList<char> revWord = new LinkedList<char>();
+            foreach(char letter in wordArr)
+            {
+                revWord.AddFirst(letter);
+            }
+            foreach (char letter in revWord)
+            {
+                Console.WriteLine(letter);
+            }
+            Console.WriteLine("hi {0}, here is your name backwards: {1}", name, string.Join("", revWord));
+            // Console.WriteLine("hi {0} here is your name backwards {1}", name);
+            //Console.WriteLine("[{0}]", string.Join(", ", yourArray));
+            // yourArray.ToList().ForEach(Console.WriteLine);
         }
     }
 }
